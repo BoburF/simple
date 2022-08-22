@@ -5,6 +5,7 @@ const session = require('express-session');
 const path = require('path')
 const flash = require('connect-flash');
 const cookie = require('cookie-parser')
+const compression = require('compression')
 
 // dotenv
 require('dotenv').config()
@@ -43,6 +44,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(require('compression')())
 app.use(cookie());
+app.use(compression())
 
 // routes
 const client = require('./routes/client/index')
