@@ -1,0 +1,33 @@
+<div class="product-section mt-150 mb-150">
+    <div class="form">
+        <form action="/admin/products/add" class="form" method="post" enctype="multipart/form-data">
+            <h2>Product add</h2>
+            <label>Name <input type="text" name="name" required></label>
+            <label>Price <input type="number" name="price" placeholder="$" required></label>
+            <label>Per <input type="text" name="per" required></label>
+            <label>Image <input type="file" name="img" required></label>
+            <label>Description
+                <textarea name="description" id="description" cols="30" rows="5" required></textarea>
+            </label>
+            {{#if error}}<p>{{error}}</p>{{/if}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row product-lists">
+            {{#each products}}
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="/products/{{_id}}"><img src="{{img}}" alt=""></a>
+                    </div>
+                    <h3>{{name}}</h3>
+                    <p class="product-price"><span>Per {{per}}</span> {{price}}$ </p>
+                    <a href="/admin/products/update/{{_id}}" class="cart-btn">Edit</a>
+                    <a href="/admin/products/delete/{{_id}}" class="cart-btn">Delete</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

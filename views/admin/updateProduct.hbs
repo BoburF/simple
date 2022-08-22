@@ -1,0 +1,13 @@
+<div class="form">
+    <form action="/admin/products/update/{{product._id}}" class="form" method="post">
+        <h2>Product add</h2>
+        <label>Name <input type="text" name="name" value="{{product.name}}" required></label>
+        <label>Price <input type="number" name="price" value="{{product.price}}" placeholder="$" required></label>
+        <label>Per <input type="text" name="per" value="{{product.per}}" required></label>
+        <label>Description
+            <textarea name="description" id="description" cols="30" rows="5" required>{{product.description}}</textarea>
+        </label>
+        {{#if error}}<p>{{error}}</p>{{/if}}
+        <button type="submit">Submit</button>
+    </form>
+</div>
