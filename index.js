@@ -64,5 +64,7 @@ app.listen(PORT, () => {
     console.log('Server listened on port', PORT);
 })
 
-// MONGO='mongodb+srv://Bobur:2vhYyYBf659w6eCm@cluster0.jnpjw6n.mongodb.net/Product'
+// MONGO='mongodb+srv://Bobur:2vhYyYBf659w6eCm@cluster0.jnpjw6n.mongodb.net/Fruiktha'
 // KEY='Secret'
+// CHAT_ID='635762695'
+// BOT_TOKEN='1797099155:AAGCKDEKnIDcqVtnpTkapp0bPNbhhnV5aQ8'
